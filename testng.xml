@@ -9,12 +9,29 @@
 		<listener class-name="com.upnorway.listeners.CustomListeners" />
 	</listeners>
 
-	<test name="Home page">
+	<test name="partner test">
+		<parameter name="test_url"
+			value="https://insider.qa.upnorway.net/" />
 		<classes>
-
-			<class name="com.upnorway.testcases.Login_test" /> 
+			<class name="com.upnorway.testcases.Login_test" />
 		</classes>
 	</test>
+
+	<test name="insider test">
+		<parameter name="test_url"
+			value="https://insider.qa.upnorway.net/" />
+		<classes>
+			<class name="com.upnorway.testcases.Login_test" />
+		</classes>
+	</test>
+	<test name="insider2 test">
+		<parameter name="test_url"
+			value="https://partner.qa.upnorway.net/" />
+		<classes>
+			<class name="com.upnorway.testcases.Login_test" />
+		</classes>
+	</test>
+
 </suite>
 
 

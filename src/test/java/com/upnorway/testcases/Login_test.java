@@ -7,12 +7,14 @@ import org.testng.SkipException;
 import org.testng.annotations.Test;
 
 import com.upnorway.base.TestBase;
+import com.upnorway.pages.Dashboard;
 import com.upnorway.pages.LoginPage;
 import com.upnorway.utilities.TestUtil;
 
 public class Login_test extends TestBase{
 
 	LoginPage db = new LoginPage();
+	Dashboard dashboard = new Dashboard();
 	
 	//Verify the email field in the forgot password section
 	
@@ -166,6 +168,6 @@ public class Login_test extends TestBase{
 		String validationMessage = driver.findElement(By.xpath(OR.getProperty("dashBoardTitle_XPATH"))).getText();
 
 		verifyEquals(data.get("title"),validationMessage);
-		
+		dashboard.logOut();
 	}
 }
